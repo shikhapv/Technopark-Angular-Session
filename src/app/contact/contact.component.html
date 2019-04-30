@@ -1,18 +1,67 @@
-<div class="form-group">
+<div class="container">
+<div class="row">
+        <div class="col col-sm-3"></div>
+<div class="col col-sm-6">
 
-    <label for="usr">Name:</label>
-    <input type="text" class="form-control" id="usr">
-  
-    <label for="mob">mobile:</label>
-    <input type="number" class="form-control" id="mob">
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    
+        <table class="table">
+            <tr>
+                <td>
+                        <label for="usr">Name:</label>
+                        
+                </td>
+                <td>
+                        <input type="text" class="form-control" name="usr" ngModel>
+                        
+                </td>
+            </tr>
+            <tr>
+                    <td>
+                            <label for="mob">Mobile:</label>
+                            
+                    </td>
+                    <td>
+                            <input type="number" class="form-control" name="mob" ngModel>
+                           
+                    </td>
+                </tr>
+                <tr>
+                        <td>
+                                <label for="email">Email:</label>
+                                
+                        </td>
+                        <td>
+                                <input type="email" class="form-control" name="email" ngModel>
+                                
+                        </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                    <label for="msg">Message:</label>
+                                    
+                            </td>
+                            <td>
+                                    <textarea class="form-control" rows="5" name="msg" ngModel></textarea><br>
+                                    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                    <button type="submit" class="btn btn-outline-success">Submit</button>
+                            </td>
+                        </tr>
+                        <p>{{getName}}</p>
+                        <p>{{getEmail}}</p>
+                        <p>{{getMob}}</p>
+                        <p>{{getMsg}}</p>
+                        
 
-    <label for="email">Email:</label>
-    <input type="email" class="form-control" id="email">
-  
-  
-    <label for="msg">MSG:</label>
-  <textarea class="form-control" rows="5" id="msg"></textarea>
 
-  <button type="button" class="btn btn-dark">SUBMIT</button>
 
-  </div>
+        </table>
+    
+</form>
+</div>
+
+</div>

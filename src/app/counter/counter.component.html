@@ -1,0 +1,20 @@
+<div class="container">
+  <table class="table">
+    <p [innerText]="count"></p>
+    <tr>
+      <td>
+          <label for="count"></label>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <button (click)=counterInc() >count +</button>
+      </td>
+    
+      <td>
+        <button (click)=counterDec() >count -</button>
+      </td>
+    </tr>
+    </table>
+</div>
